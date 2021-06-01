@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #111;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  z-index: 1000;
+}
+header .logo {
+  position: relative;
+  font-size: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+header .toggle {
+  max-width: 60px;
+  cursor: pointer;
+}
+header .toggle img {
+  max-width: 100%;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+  pointer-events: none;
+}
+.banner .textBox {
+  position: relative;
+  max-width: 550px;
+  z-index: 2;
+}
+.banner .textBox h2 {
+  color: #fff;
+  font-size: 3em;
+}
+.banner .textBox p {
+  color: #fff;
+  font-size: 1.1em;
+  margin: 5px 0 25px;
+}
+.banner .textBox a {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: all 0.35s;
+  border: 2px solid rgb(138, 133, 133);
+}
+
+/* Button Hover Start */
+
+.banner .textBox a span {
+  position: relative;
+  z-index: 2;
+}
+
+.banner .textBox a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #111;
+  transition: all 0.35s;
+}
+
+.banner .textBox a:hover {
+  color: #fff;
+}
+
+.banner .textBox a:hover:after {
+  width: 100%;
+}
+
+/* Button Hover End */
+
+.banner .vidBox {
+  position: relative;
+  background: #fff;
+  margin-left: 40px;
+  width: 100%;
+  height: 400px;
+  z-index: 1;
+}
+.banner .vidBox video {
+  opacity: 1;
+}
+.banner .sci {
+  position: absolute;
+  bottom: 20px;
+  letter-spacing: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner .sci li {
+  list-style: none;
+}
+.banner .sci li a {
+  display: inline-block;
+  margin-right: 15px;
+}
+.banner .sci li a img {
+  transform: scale(0.5);
+  filter: invert(1);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  header {
+    padding: 30px 50px;
+  }
+  .banner {
+    padding: 140px 50px 0;
+    flex-direction: column;
+  }
+  .banner::before {
+    display: none;
+  }
+  .banner .textBox {
+    max-width: 100%;
+  }
+  .banner .textBox h2 {
+    font-size: 2.5em;
+  }
+  .banner .vidBox {
+    width: 100%;
+    height: 150px;
+    margin: 40px 0 100px;
+  }
+  .banner .sci {
+    left: 50px;
+  }
+}
+
+@media (min-width: 1920px) {
+  header {
+    padding: 60px 130px;
+  }
+  header .logo {
+    font-size: 3.5em;
+    font-weight: 800;
+    letter-spacing: 4px;
+  }
+  header .toggle {
+    max-width: 120px;
+  }
+  .banner {
+    padding: 0 130px;
+  }
+  .banner .textBox {
+    max-width: 750px;
+  }
+  .banner .textBox h2 {
+    font-size: 4.5em;
+  }
+  .banner .textBox p {
+    font-size: 1.6em;
+    margin: 10px 0 50px;
+  }
+  .banner .textBox a {
+    padding: 20px 40px;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border: 4px solid rgb(138, 133, 133);
+  }
+  .banner::before {
+    width: 600px;
+  }
+  .banner .vidBox {
+    width: 100%;
+    height: 600px;
+    margin-left: 60px;
+  }
+  .banner .sci {
+    bottom: 80px;
+  }
+}
